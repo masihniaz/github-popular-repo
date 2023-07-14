@@ -6,6 +6,41 @@
     <title>Popular Repository</title>
   </head>
   <body>
+    <div class="relative flex min-h-screen flex-col items-center overflow-hidden bg-gradient-to-br from-lime-300 to-green-500 p-6 sm:py-12">
+      <div class="relative rounded-2xl bg-white px-6 pt-5 pb-5 shadow-xl ring-1 ring-gray-900/5 sm:mx-auto sm:max-w-lg sm:px-5">
+        <div class="mx-auto max-w-md">
+            <input type="search" 
+                   id="search"
+                   placeholder="Search a repository"
+                  class="peer cursor-pointer relative z-10 h-12 pl-16 pr-4 rounded-full border bg-transparent outline-none w-full focus:cursor-text focus:border-lime-300" />
+            <svg xmlns="http://www.w3.org/2000/svg" class="absolute inset-y-0 my-auto h-8 w-12 border-r border-transparent stroke-gray-500 px-3.5 peer-focus:border-lime-300 peer-focus:stroke-lime-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+            </svg>
+        </div>
+      </div>
+
+      <div id="repo_container" class="max-w-lg mx-auto my-10 bg-white hidden rounded-lg shadow-md p-5 sm:mx-auto sm:max-w-lg sm:px-5">
+        <img id="repo_avatar" class="w-32 h-32 rounded-full mx-auto" src="" alt="Profile picture">
+        <h2 id="repo_name" class="text-center text-2xl font-semibold mt-3"></h2>
+        <p id="repo_login" class="text-center text-gray-600 mt-1"></p>
+        <div class="flex justify-center mt-5">
+
+          <div class="flex flex-col items-center">
+            <p class="text-black-300 mx-3">Stars</p>
+            <p id="repo_stars" class="text-black-300 text-sm mx-3"></p>
+          </div>
+          <div class="flex flex-col items-center">
+            <p class="text-black-300 mx-3">Forks</p>
+            <p id="repo_forks" class="text-black-300 text-sm mx-3"></p>
+          </div>
+
+          <div class="flex flex-col items-center">
+            <p class="text-black-300 mx-3">Popular</p>
+            <p id="repo_popularity" class="text-black-300 text-sm mx-3"></p>
+          </div>
+        </div>
+      </div>
+    </div>
     <script type="module" src="/main.js"></script>
   </body>
 </html>
